@@ -919,6 +919,20 @@
             color: #888;
             text-align: center;
         }
+
+        .footer-credential {
+            color: #aaa;
+            text-decoration: none;
+            cursor: pointer;
+            transition: color 0.2s ease;
+            border-bottom: 1px dotted #666;
+        }
+        
+        .footer-credential:hover {
+            color: #c41e3a;
+            border-bottom-color: #c41e3a;
+        }
+
         
         .footer-bottom-links {
             display: flex;
@@ -2307,7 +2321,7 @@
         <div class="footer-bottom">
             <div class="footer-bottom-content">
                 <p>© 2025 Miele Appliance Repair New Jersey. All Rights Reserved.</p>
-                <p>Licensed & Insured • Factory Certified Technicians • Same-Day Service Available</p>
+                <p><a href="#" class="modal-trigger footer-credential" data-modal="licensedModal">Licensed & Insured</a> • <a href="#" class="modal-trigger footer-credential" data-modal="certifiedModal">Factory Certified Technicians</a> • <a href="#" class="modal-trigger footer-credential" data-modal="samedayModal">Same-Day Service Available</a></p>
             </div>
         </div>
 <!-- Modal Overlay -->
@@ -2369,6 +2383,55 @@
             <h3 style="color: #1a1a2e; margin-bottom: 15px;">Thank You for Your Review!</h3>
             <p style="color: #666; font-size: 16px;">Your review will be posted within 24 hours.</p>
         </div>
+    </div>
+</div>
+
+<!-- Licensed & Insured Modal -->
+<div class="modal-card" id="licensedModal" style="max-width: 500px;">
+    <div class="modal-header">
+        <h2>Licensed & Insured</h2>
+        <button class="modal-close" data-close="modal">&times;</button>
+    </div>
+    <div class="modal-content">
+        <div style="text-align: center; margin-bottom: 20px;">
+            <span style="font-size: 48px;">🛡️</span>
+        </div>
+        <p style="color: #333; font-size: 16px; line-height: 1.6; margin-bottom: 15px;"><strong>Fully Licensed:</strong> Our technicians hold all required state and local licenses to perform appliance repairs in New Jersey. We comply with all regulatory requirements and industry standards.</p>
+        <p style="color: #333; font-size: 16px; line-height: 1.6; margin-bottom: 15px;"><strong>Fully Insured:</strong> We carry comprehensive liability insurance and workers compensation coverage. This protects you, your home, and our technicians during every service call.</p>
+        <p style="color: #666; font-size: 14px; font-style: italic;">Your peace of mind is our priority. Ask to see our credentials at any time.</p>
+    </div>
+</div>
+
+<!-- Factory Certified Modal -->
+<div class="modal-card" id="certifiedModal" style="max-width: 500px;">
+    <div class="modal-header">
+        <h2>Factory Certified Technicians</h2>
+        <button class="modal-close" data-close="modal">&times;</button>
+    </div>
+    <div class="modal-content">
+        <div style="text-align: center; margin-bottom: 20px;">
+            <span style="font-size: 48px;">🔧</span>
+        </div>
+        <p style="color: #333; font-size: 16px; line-height: 1.6; margin-bottom: 15px;"><strong>Factory Training:</strong> Our technicians complete rigorous training programs directly from Miele and other major appliance manufacturers. This ensures expert knowledge of your specific appliance.</p>
+        <p style="color: #333; font-size: 16px; line-height: 1.6; margin-bottom: 15px;"><strong>Genuine Parts:</strong> We use only authentic manufacturer parts, maintaining your warranty coverage and ensuring optimal appliance performance.</p>
+        <p style="color: #333; font-size: 16px; line-height: 1.6; margin-bottom: 15px;"><strong>Ongoing Education:</strong> Our team stays current with the latest repair techniques, new models, and technological advances through continuous training.</p>
+    </div>
+</div>
+
+<!-- Same-Day Service Modal -->
+<div class="modal-card" id="samedayModal" style="max-width: 500px;">
+    <div class="modal-header">
+        <h2>Same-Day Service Available</h2>
+        <button class="modal-close" data-close="modal">&times;</button>
+    </div>
+    <div class="modal-content">
+        <div style="text-align: center; margin-bottom: 20px;">
+            <span style="font-size: 48px;">⚡</span>
+        </div>
+        <p style="color: #333; font-size: 16px; line-height: 1.6; margin-bottom: 15px;"><strong>Rapid Response:</strong> Call before noon and we can often have a technician at your door the same day. We understand that a broken appliance disrupts your entire household.</p>
+        <p style="color: #333; font-size: 16px; line-height: 1.6; margin-bottom: 15px;"><strong>Flexible Scheduling:</strong> We offer morning, afternoon, and evening appointment windows to fit your busy schedule. Weekend appointments are also available.</p>
+        <p style="color: #333; font-size: 16px; line-height: 1.6; margin-bottom: 15px;"><strong>Stocked Service Vehicles:</strong> Our vans carry common replacement parts, allowing many repairs to be completed in a single visit.</p>
+        <p style="color: #666; font-size: 14px; font-style: italic;">*Same-day service subject to availability and location.</p>
     </div>
 </div>
     </footer>
