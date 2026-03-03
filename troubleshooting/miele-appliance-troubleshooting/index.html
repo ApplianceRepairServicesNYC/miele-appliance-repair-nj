@@ -445,24 +445,23 @@
             transform: translateY(-12px);
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
         }
-        .service-icon {
-            height: 120px;
+        .service-image {
+            width: 100%;
+            height: 200px;
+            background: transparent;
+            border-radius: 10px;
+            margin-bottom: 20px;
             display: flex;
             align-items: center;
             justify-content: center;
-            margin-bottom: 20px;
-            color: var(--blue);
-            transition: color .3s;
+            overflow: hidden;
+            padding: 10px;
+            box-sizing: border-box;
         }
-        .service-icon img {
-            max-height: 80px;
-            width: auto;
+        .service-image img {
+            max-width: 100%;
+            max-height: 100%;
             object-fit: contain;
-            filter: brightness(1.15);
-            mix-blend-mode: multiply;
-        }
-        .service:hover .service-icon {
-            color: var(--red);
         }
         .service-types {
             margin-top: 20px;
@@ -1783,7 +1782,7 @@
             <h2 style="text-align:center; font-size:36px; margin-bottom:50px;">Miele Appliance Troubleshooting Guide</h2>
             <div class="services-grid">
                 <div class="service">
-                    <div class="service-icon"><img src="/assets/images/appliances/refrigerator.webp" alt="Miele Refrigerator repair" width="80" height="80" loading="lazy"></div>
+                    <div class="service-image"><img src="/assets/images/appliances/refrigerator.webp" alt="Miele Refrigerator repair" width="200" height="180" loading="lazy"></div>
                     <h3>Miele Refrigerator Troubleshooting</h3>
                     <div class="service-types">
                         <h4>Common Refrigerator Problems:</h4>
@@ -1876,7 +1875,7 @@
                     </div>
                 </div>
                 <div class="service">
-                    <div class="service-icon">👕</div>
+                    <div class="service-image">👕</div>
                     <h3>Miele Washer Troubleshooting</h3>
                     <div class="service-types">
                         <h4>Common Washer Problems:</h4>
@@ -1969,7 +1968,7 @@
                     </div>
                 </div>
                 <div class="service">
-                    <div class="service-icon"><img src="/assets/images/appliances/oven.webp" alt="Miele Oven repair" width="80" height="80" loading="lazy"></div>
+                    <div class="service-image"><img src="/assets/images/appliances/oven.webp" alt="Miele Oven repair" width="200" height="180" loading="lazy"></div>
                     <h3>Miele Dryer Troubleshooting</h3>
                     <div class="service-types">
                         <h4>Common Dryer Problems:</h4>
@@ -2062,7 +2061,7 @@
                     </div>
                 </div>
                 <div class="service">
-                    <div class="service-icon"><img src="/assets/images/appliances/dishwasher.webp" alt="Miele Dishwasher repair" width="80" height="80" loading="lazy"></div>
+                    <div class="service-image"><img src="/assets/images/appliances/dishwasher.webp" alt="Miele Dishwasher repair" width="200" height="180" loading="lazy"></div>
                     <h3>Miele Dishwasher Troubleshooting</h3>
                     <div class="service-types">
                         <h4>Common Dishwasher Problems:</h4>
@@ -2155,7 +2154,7 @@
                     </div>
                 </div>
                 <div class="service">
-                    <div class="service-icon"><img src="/assets/images/appliances/cooktop.webp" alt="Miele Cooktop repair" width="80" height="80" loading="lazy"></div>
+                    <div class="service-image"><img src="/assets/images/appliances/cooktop.webp" alt="Miele Cooktop repair" width="200" height="180" loading="lazy"></div>
                     <h3>Miele Range/Oven Troubleshooting</h3>
                     <div class="service-types">
                         <h4>Common Range/Oven Problems:</h4>
@@ -2248,7 +2247,7 @@
                     </div>
                 </div>
                 <div class="service">
-                    <div class="service-icon"><img src="/assets/images/appliances/microwave.webp" alt="Miele Microwave repair" width="80" height="80" loading="lazy"></div>
+                    <div class="service-image"><img src="/assets/images/appliances/microwave.webp" alt="Miele Microwave repair" width="200" height="180" loading="lazy"></div>
                     <h3>Miele Microwave Troubleshooting</h3>
                     <div class="service-types">
                         <h4>Common Microwave Problems:</h4>
@@ -2341,7 +2340,7 @@
                     </div>
                 </div>
                 <div class="service">
-                    <div class="service-icon"><img src="/assets/images/appliances/refrigerator.webp" alt="Miele Refrigerator repair" width="80" height="80" loading="lazy"></div>
+                    <div class="service-image"><img src="/assets/images/appliances/refrigerator.webp" alt="Miele Refrigerator repair" width="200" height="180" loading="lazy"></div>
                     <h3>Miele Freezer Troubleshooting</h3>
                     <div class="service-types">
                         <h4>Common Freezer Problems:</h4>
@@ -2434,7 +2433,7 @@
                     </div>
                 </div>
                 <div class="service">
-                    <div class="service-icon"><img src="/assets/images/appliances/hood-vent.webp" alt="Miele Vent Hood repair" width="80" height="80" loading="lazy"></div>
+                    <div class="service-image"><img src="/assets/images/appliances/hood-vent.webp" alt="Miele Vent Hood repair" width="200" height="180" loading="lazy"></div>
                     <h3>Miele Air Conditioner Troubleshooting</h3>
                     <div class="service-types">
                         <h4>Common AC Problems:</h4>
@@ -2527,7 +2526,7 @@
                     </div>
                 </div>
                 <div class="service">
-                    <div class="service-icon"><img src="/assets/images/appliances/dryer.webp" alt="Miele Dryer repair" width="80" height="80" loading="lazy"></div>
+                    <div class="service-image"><img src="/assets/images/appliances/dryer.webp" alt="Miele Dryer repair" width="200" height="180" loading="lazy"></div>
                     <h3>Miele Dehumidifier Troubleshooting</h3>
                     <div class="service-types">
                         <h4>Common Dehumidifier Problems:</h4>
@@ -2620,7 +2619,7 @@
                     </div>
                 </div>
                 <div class="service">
-                    <div class="service-icon">🔧</div>
+                    <div class="service-image">🔧</div>
                     <h3>General Miele Troubleshooting Tips</h3>
                     <div class="service-types">
                         <h4>Universal Troubleshooting Steps:</h4>
@@ -2713,7 +2712,7 @@
                     </div>
                 </div>
                 <div class="service">
-                    <div class="service-icon"><img src="/assets/images/appliances/cooktop.webp" alt="Miele Cooktop repair" width="80" height="80" loading="lazy"></div>
+                    <div class="service-image"><img src="/assets/images/appliances/cooktop.webp" alt="Miele Cooktop repair" width="200" height="180" loading="lazy"></div>
                     <h3>Miele Cooktop Troubleshooting</h3>
                     <div class="service-types">
                         <h4>Common Cooktop Problems:</h4>
@@ -2788,7 +2787,7 @@
                     </div>
                 </div>
                 <div class="service">
-                    <div class="service-icon"><img src="/assets/images/appliances/wine-cooler.webp" alt="Miele Wine Cooler repair" width="80" height="80" loading="lazy"></div>
+                    <div class="service-image"><img src="/assets/images/appliances/wine-cooler.webp" alt="Miele Wine Cooler repair" width="200" height="180" loading="lazy"></div>
                     <h3>Miele Wine Cooler Troubleshooting</h3>
                     <div class="service-types">
                         <h4>Common Wine Cooler Problems:</h4>

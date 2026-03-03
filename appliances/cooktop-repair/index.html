@@ -473,24 +473,23 @@
             transform: translateY(-12px);
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
         }
-        .service-icon {
-            height: 120px;
+        .service-image {
+            width: 100%;
+            height: 200px;
+            background: transparent;
+            border-radius: 10px;
+            margin-bottom: 20px;
             display: flex;
             align-items: center;
             justify-content: center;
-            margin-bottom: 20px;
-            color: var(--blue);
-            transition: color .3s;
+            overflow: hidden;
+            padding: 10px;
+            box-sizing: border-box;
         }
-        .service-icon img {
-            max-height: 80px;
-            width: auto;
+        .service-image img {
+            max-width: 100%;
+            max-height: 100%;
             object-fit: contain;
-            filter: brightness(1.15);
-            mix-blend-mode: multiply;
-        }
-        .service:hover .service-icon {
-            color: var(--red);
         }
         .service-types {
             margin-top: 20px;
@@ -1816,7 +1815,7 @@
             <h2 style="text-align:center; font-size:36px; margin-bottom:50px;">Factory Certified Miele Cooktop Repair</h2>
             <div class="services-grid">
                 <div class="service">
-                    <div class="service-icon"><img src="/assets/images/appliances/cooktop.webp" alt="Miele Cooktop repair" width="80" height="80" loading="lazy"></div>
+                    <div class="service-image"><img src="/assets/images/appliances/cooktop.webp" alt="Miele Cooktop repair" width="200" height="180" loading="lazy"></div>
                     <h3>Gas Cooktop Repair</h3>
                     <div class="service-types">
                         <h4>Miele KM Gas Issues We Fix:</h4>
@@ -1876,7 +1875,7 @@
                     </div>
                 </div>
                 <div class="service">
-                    <div class="service-icon"><img src="/assets/images/appliances/cooktop.webp" alt="Miele Cooktop repair" width="80" height="80" loading="lazy"></div>
+                    <div class="service-image"><img src="/assets/images/appliances/cooktop.webp" alt="Miele Cooktop repair" width="200" height="180" loading="lazy"></div>
                     <h3>Electric Cooktop Repair</h3>
                     <div class="service-types">
                         <h4>Miele KM Electric Issues:</h4>
@@ -1936,7 +1935,7 @@
                     </div>
                 </div>
                 <div class="service">
-                    <div class="service-icon"><img src="/assets/images/appliances/cooktop.webp" alt="Miele Cooktop repair" width="80" height="80" loading="lazy"></div>
+                    <div class="service-image"><img src="/assets/images/appliances/cooktop.webp" alt="Miele Cooktop repair" width="200" height="180" loading="lazy"></div>
                     <h3>Induction Cooktop Repair</h3>
                     <div class="service-types">
                         <h4>Miele KM Induction Issues We Fix:</h4>
@@ -1996,7 +1995,7 @@
                     </div>
                 </div>
                 <div class="service">
-                    <div class="service-icon"><img src="/assets/images/appliances/cooktop.webp" alt="Miele Cooktop repair" width="80" height="80" loading="lazy"></div>
+                    <div class="service-image"><img src="/assets/images/appliances/cooktop.webp" alt="Miele Cooktop repair" width="200" height="180" loading="lazy"></div>
                     <h3>Radiant Cooktop Repair</h3>
                     <div class="service-types">
                         <h4>Miele KM Radiant Issues:</h4>
@@ -2056,7 +2055,7 @@
                     </div>
                 </div>
                 <div class="service">
-                    <div class="service-icon"><img src="/assets/images/appliances/cooktop.webp" alt="Miele Cooktop repair" width="80" height="80" loading="lazy"></div>
+                    <div class="service-image"><img src="/assets/images/appliances/cooktop.webp" alt="Miele Cooktop repair" width="200" height="180" loading="lazy"></div>
                     <h3>Ceramic Glass Cooktop Repair</h3>
                     <div class="service-types">
                         <h4>Miele CERAN Surface Issues:</h4>
@@ -2116,7 +2115,7 @@
                     </div>
                 </div>
                 <div class="service">
-                    <div class="service-icon"><img src="/assets/images/appliances/cooktop.webp" alt="Miele Cooktop repair" width="80" height="80" loading="lazy"></div>
+                    <div class="service-image"><img src="/assets/images/appliances/cooktop.webp" alt="Miele Cooktop repair" width="200" height="180" loading="lazy"></div>
                     <h3>Downdraft & Ventilation Repair</h3>
                     <div class="service-types">
                         <h4>Miele Integrated Vent Issues:</h4>
@@ -2176,7 +2175,7 @@
                     </div>
                 </div>
                 <div class="service">
-                    <div class="service-icon"><img src="/assets/images/appliances/cooktop.webp" alt="Miele Cooktop repair" width="80" height="80" loading="lazy"></div>
+                    <div class="service-image"><img src="/assets/images/appliances/cooktop.webp" alt="Miele Cooktop repair" width="200" height="180" loading="lazy"></div>
                     <h3>SmartLine & CombiSet Repair</h3>
                     <div class="service-types">
                         <h4>Miele Modular System Issues:</h4>
@@ -2236,7 +2235,7 @@
                     </div>
                 </div>
                 <div class="service">
-                    <div class="service-icon"><img src="/assets/images/appliances/cooktop.webp" alt="Miele Cooktop repair" width="80" height="80" loading="lazy"></div>
+                    <div class="service-image"><img src="/assets/images/appliances/cooktop.webp" alt="Miele Cooktop repair" width="200" height="180" loading="lazy"></div>
                     <h3>Built-In Cooktop Repair</h3>
                     <div class="service-types">
                         <h4>Miele KM Built-In Issues:</h4>
@@ -2296,7 +2295,7 @@
                     </div>
                 </div>
                 <div class="service">
-                    <div class="service-icon"><img src="/assets/images/appliances/cooktop.webp" alt="Miele Cooktop repair" width="80" height="80" loading="lazy"></div>
+                    <div class="service-image"><img src="/assets/images/appliances/cooktop.webp" alt="Miele Cooktop repair" width="200" height="180" loading="lazy"></div>
                     <h3>30-Inch Cooktop Repair</h3>
                     <div class="service-types">
                         <h4>Miele 30-Inch KM Issues:</h4>
@@ -2356,7 +2355,7 @@
                     </div>
                 </div>
                 <div class="service">
-                    <div class="service-icon"><img src="/assets/images/appliances/cooktop.webp" alt="Miele Cooktop repair" width="80" height="80" loading="lazy"></div>
+                    <div class="service-image"><img src="/assets/images/appliances/cooktop.webp" alt="Miele Cooktop repair" width="200" height="180" loading="lazy"></div>
                     <h3>36-Inch Cooktop Repair</h3>
                     <div class="service-types">
                         <h4>Miele 36-Inch KM Issues:</h4>
@@ -2416,7 +2415,7 @@
                     </div>
                 </div>
                 <div class="service">
-                    <div class="service-icon"><img src="/assets/images/appliances/cooktop.webp" alt="Miele Cooktop repair" width="80" height="80" loading="lazy"></div>
+                    <div class="service-image"><img src="/assets/images/appliances/cooktop.webp" alt="Miele Cooktop repair" width="200" height="180" loading="lazy"></div>
                     <h3>Miele@home Connected Repair</h3>
                     <div class="service-types">
                         <h4>Miele Smart Features:</h4>

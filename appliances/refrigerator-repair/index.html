@@ -473,24 +473,23 @@
             transform: translateY(-12px);
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
         }
-        .service-icon {
-            height: 120px;
+        .service-image {
+            width: 100%;
+            height: 200px;
+            background: transparent;
+            border-radius: 10px;
+            margin-bottom: 20px;
             display: flex;
             align-items: center;
             justify-content: center;
-            margin-bottom: 20px;
-            color: var(--blue);
-            transition: color .3s;
+            overflow: hidden;
+            padding: 10px;
+            box-sizing: border-box;
         }
-        .service-icon img {
-            max-height: 80px;
-            width: auto;
+        .service-image img {
+            max-width: 100%;
+            max-height: 100%;
             object-fit: contain;
-            filter: brightness(1.15);
-            mix-blend-mode: multiply;
-        }
-        .service:hover .service-icon {
-            color: var(--red);
         }
         .service-types {
             margin-top: 20px;
@@ -1813,7 +1812,7 @@
             <h2 style="text-align:center; font-size:36px; margin-bottom:50px;">Factory Certified Miele Refrigerator Repair</h2>
             <div class="services-grid">
                 <div class="service">
-                    <div class="service-icon"><img src="/assets/images/appliances/refrigerator.webp" alt="Miele Refrigerator repair" width="80" height="80" loading="lazy"></div>
+                    <div class="service-image"><img src="/assets/images/appliances/refrigerator.webp" alt="Miele Refrigerator repair" width="200" height="180" loading="lazy"></div>
                     <h3>MasterCool Built-In Refrigerator Repair</h3>
                     <div class="service-types">
                         <h4>Common Issues We Fix:</h4>
@@ -1873,7 +1872,7 @@
                     </div>
                 </div>
                 <div class="service">
-                    <div class="service-icon"><img src="/assets/images/appliances/refrigerator.webp" alt="Miele Refrigerator repair" width="80" height="80" loading="lazy"></div>
+                    <div class="service-image"><img src="/assets/images/appliances/refrigerator.webp" alt="Miele Refrigerator repair" width="200" height="180" loading="lazy"></div>
                     <h3>Miele Freestanding Refrigerator Repair</h3>
                     <div class="service-types">
                         <h4>Common Issues We Fix:</h4>
@@ -1933,7 +1932,7 @@
                     </div>
                 </div>
                 <div class="service">
-                    <div class="service-icon"><img src="/assets/images/appliances/refrigerator.webp" alt="Miele Refrigerator repair" width="80" height="80" loading="lazy"></div>
+                    <div class="service-image"><img src="/assets/images/appliances/refrigerator.webp" alt="Miele Refrigerator repair" width="200" height="180" loading="lazy"></div>
                     <h3>Miele Freezer & Combination Repair</h3>
                     <div class="service-types">
                         <h4>Common Issues We Fix:</h4>
@@ -1993,7 +1992,7 @@
                     </div>
                 </div>
                 <div class="service">
-                    <div class="service-icon"><img src="/assets/images/appliances/refrigerator.webp" alt="Miele Refrigerator repair" width="80" height="80" loading="lazy"></div>
+                    <div class="service-image"><img src="/assets/images/appliances/refrigerator.webp" alt="Miele Refrigerator repair" width="200" height="180" loading="lazy"></div>
                     <h3>Miele Bottom-Mount Refrigerator Repair</h3>
                     <div class="service-types">
                         <h4>Common Issues We Fix:</h4>
@@ -2053,7 +2052,7 @@
                     </div>
                 </div>
                 <div class="service">
-                    <div class="service-icon"><img src="/assets/images/appliances/refrigerator.webp" alt="Miele Refrigerator repair" width="80" height="80" loading="lazy"></div>
+                    <div class="service-image"><img src="/assets/images/appliances/refrigerator.webp" alt="Miele Refrigerator repair" width="200" height="180" loading="lazy"></div>
                     <h3>MasterCool Built-In Column Repair</h3>
                     <div class="service-types">
                         <h4>Built-In Services:</h4>
@@ -2113,7 +2112,7 @@
                     </div>
                 </div>
                 <div class="service">
-                    <div class="service-icon"><img src="/assets/images/appliances/refrigerator.webp" alt="Miele Refrigerator repair" width="80" height="80" loading="lazy"></div>
+                    <div class="service-image"><img src="/assets/images/appliances/refrigerator.webp" alt="Miele Refrigerator repair" width="200" height="180" loading="lazy"></div>
                     <h3>Miele Wine Conditioning Unit Repair</h3>
                     <div class="service-types">
                         <h4>Wine Unit Services:</h4>
@@ -2173,7 +2172,7 @@
                     </div>
                 </div>
                 <div class="service">
-                    <div class="service-icon"><img src="/assets/images/appliances/refrigerator.webp" alt="Miele Refrigerator repair" width="80" height="80" loading="lazy"></div>
+                    <div class="service-image"><img src="/assets/images/appliances/refrigerator.webp" alt="Miele Refrigerator repair" width="200" height="180" loading="lazy"></div>
                     <h3>Miele Under-Counter Refrigerator Repair</h3>
                     <div class="service-types">
                         <h4>Under-Counter Services:</h4>
@@ -2233,7 +2232,7 @@
                     </div>
                 </div>
                 <div class="service">
-                    <div class="service-icon"><img src="/assets/images/appliances/refrigerator.webp" alt="Miele Refrigerator repair" width="80" height="80" loading="lazy"></div>
+                    <div class="service-image"><img src="/assets/images/appliances/refrigerator.webp" alt="Miele Refrigerator repair" width="200" height="180" loading="lazy"></div>
                     <h3>Miele@home Connected Repair</h3>
                     <div class="service-types">
                         <h4>Smart Services:</h4>
@@ -2293,7 +2292,7 @@
                     </div>
                 </div>
                 <div class="service">
-                    <div class="service-icon"><img src="/assets/images/appliances/refrigerator.webp" alt="Miele Refrigerator repair" width="80" height="80" loading="lazy"></div>
+                    <div class="service-image"><img src="/assets/images/appliances/refrigerator.webp" alt="Miele Refrigerator repair" width="200" height="180" loading="lazy"></div>
                     <h3>Miele Professional Series Repair</h3>
                     <div class="service-types">
                         <h4>Professional Services:</h4>
