@@ -31,7 +31,7 @@
             --gray: #f8f9fa;
         }
         body {
-            font-family: 'Inter', sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
             margin: 0;
             color: #333;
             background: #fff;
@@ -42,7 +42,8 @@
         h1,
         h2,
         h3 {
-            font-family: 'Montserrat', sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            font-weight: 700;
             color: var(--blue);
         }
         .container {
@@ -114,6 +115,7 @@
             transition: all .3s;
             cursor: pointer;
             box-sizing: border-box;
+            border: none;
         }
         .nav-call-btn:hover {
             background: #c41b20;
@@ -138,16 +140,19 @@
             overflow-wrap: break-word;
             white-space: nowrap;
             overscroll-behavior: contain;
-            -webkit-overflow-scrolling: touch;
         }
         .services-menu.active .services-dropdown {
-            display: block !important;
+            display: block;
+        }
+        @media (hover: hover) and (pointer: fine) {
+            .services-menu:hover .services-dropdown {
+                display: block;
+            }
         }
         #servicesMenu .services-dropdown {
             right: 20px;
         }
         
-        /* Close button styles */
         .dropdown-close-btn {
             position: absolute;
             top: 12px;
@@ -238,34 +243,25 @@
             cursor: pointer;
             box-sizing: border-box;
         }
-        .submenu-toggle i {
+        .submenu-toggle:after {
+            content: "›";
             transition: transform .3s;
             font-size: 18px;
         }
-        .submenu-toggle.active i {
+        .submenu-toggle:hover:after {
             transform: rotate(90deg);
         }
         .additional-submenu,
         .service-areas-submenu {
             max-height: 0;
             overflow-y: auto;
-            transition: max-height 0.8s ease, opacity 0.3s ease, visibility 0.3s ease;
+            transition: max-height 0.8s ease;
             background: rgba(0, 0, 0, 0.2);
             margin: 0 20px 14px;
             border-radius: 8px;
             box-sizing: border-box;
             white-space: normal;
-            visibility: hidden;
-            opacity: 0;
             -webkit-overflow-scrolling: touch;
-        }
-        .additional-submenu.active,
-        .service-areas-submenu.active {
-            max-height: none;
-            padding: 16px 0;
-            visibility: visible;
-            opacity: 1;
-            display: block;
         }
         .additional-submenu li,
         .service-areas-submenu li {
@@ -276,6 +272,15 @@
             margin: 12px 0;
             transition: all .3s;
             box-sizing: border-box;
+            cursor: pointer;
+        }
+        .additional-submenu li:hover,
+        .additional-submenu li:active,
+        .service-areas-submenu li:hover,
+        .service-areas-submenu li:active {
+            background: var(--red);
+            color: white;
+            padding-left: 54px;
         }
         .service-areas-submenu li a {
             color: #eee;
@@ -287,13 +292,8 @@
             cursor: pointer;
             pointer-events: auto;
         }
-        .additional-submenu li:hover,
-        .service-areas-submenu li:hover {
-            background: var(--red);
-            color: white;
-            padding-left: 54px;
-        }
-        .service-areas-submenu li:hover a {
+        .service-areas-submenu li:hover a,
+        .service-areas-submenu li:active a {
             color: white;
         }
         .hero {
@@ -302,7 +302,7 @@
             text-align: center;
             padding: 160px 20px 120px;
             margin-top: 80px;
-            background: linear-gradient(rgba(0, 0, 0, 0.48), rgba(0, 0, 0, 0.48)), url('/assets/images/appliances/hero-appliances.webp?v=3') center/cover no-repeat;
+            background: linear-gradient(rgba(0, 0, 0, 0.48), rgba(0, 0, 0, 0.48)), url('/assets/images/appliances/hero-appliances.webp?v=3') center center/cover no-repeat;
             background-attachment: scroll;
             min-height: 70vh;
             display: flex;
@@ -334,63 +334,49 @@
             font-size: 20px;
             transition: all .3s;
             box-sizing: border-box;
+            border: none;
+            cursor: pointer;
         }
         .btn:hover {
             background: #c41b20;
             transform: translateY(-3px);
             box-shadow: 0 10px 30px rgba(228, 30, 38, 0.5);
         }
-        #heroCallNow {
-            background: var(--red);
-            color: white;
-            padding: 16px 40px;
-            border-radius: 8px;
-            font-weight: 700;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 20px;
-            transition: all .3s;
-            border: none;
-            cursor: pointer;
-        }
-        #heroCallNow:hover {
-            background: #c41b20;
-            transform: translateY(-3px);
-            box-shadow: 0 10px 30px rgba(228, 30, 38, 0.5);
-        }
         @media (max-width: 768px) {
             .hero {
-                padding: 130px 15px 90px;
-                min-height: 65vh;
-                background-position: center 35%;
+                padding: 160px 15px 90px;
+                min-height: 55vh;
+                background-position: center center;
+                background-size: cover;
             }
             .hero h1 {
-                font-size: 42px;
+                font-size: 32px;
+                line-height: 1.3;
             }
             .hero p {
-                font-size: 20px;
+                font-size: 18px;
+                padding: 0 10px;
             }
-            .sa-responsive-columns {
-                display: flex;
-                flex-direction: column;
-                gap: 8px;
+            .btn {
+                padding: 14px 30px;
+                font-size: 18px;
             }
         }
         @media (max-width: 480px) {
             .hero {
-                padding: 110px 15px 70px;
-                min-height: 60vh;
+                padding: 150px 15px 60px;
+                min-height: 50vh;
             }
             .hero h1 {
-                font-size: 34px;
+                font-size: 26px;
+                line-height: 1.3;
             }
             .hero p {
-                font-size: 18px;
+                font-size: 16px;
             }
-            .sa-responsive-columns {
-                display: flex;
-                flex-direction: column;
-                gap: 8px;
+            .btn {
+                padding: 12px 24px;
+                font-size: 16px;
             }
         }
         section {
@@ -402,8 +388,9 @@
         }
         .services-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 30px;
+            justify-items: start;
         }
         .service {
             height: 100%;
@@ -416,6 +403,23 @@
             position: relative;
             cursor: pointer;
             box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            min-height: 280px;
+        }
+        .service h3 {
+            min-height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .service-types {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        .service-types > div[id^="expandable-content-"] {
+            margin-top: auto;
         }
         .service:hover {
             transform: translateY(-12px);
@@ -446,12 +450,13 @@
             border-radius: 10px;
             max-height: 0;
             overflow: hidden;
-            transition: max-height .5s ease, opacity .5s ease;
             opacity: 0;
+            transition: max-height 0.5s ease, opacity 0.5s ease;
             box-sizing: border-box;
         }
         .service.active .service-types {
-            max-height: 1000px;
+            max-height: 2000px;
+            overflow: visible;
             opacity: 1;
         }
         .service-types h4 {
@@ -470,7 +475,7 @@
             margin: 6px 0;
             background: rgba(255, 255, 255, 0.8);
             border-radius: 8px;
-            transition: all .3s;
+            transition: background .3s, color .3s;
             color: #333;
             font-size: 15px;
             box-sizing: border-box;
@@ -479,8 +484,6 @@
         .service-types li:active {
             background: var(--red);
             color: white;
-            padding-left: 30px;
-            transform: translateX(5px);
         }
         #sa-service-areas {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -491,7 +494,6 @@
             margin: 0 auto 3rem;
             padding: 20px;
             position: relative;
-            animation: fadeIn .8s ease-out forwards;
             box-sizing: border-box;
         }
         #sa-service-areas h2 {
@@ -501,10 +503,6 @@
             margin-bottom: 5px;
             text-shadow: 0 2px 4px rgba(0, 0, 0, .3);
             transition: transform .3s, color .3s;
-        }
-        #sa-service-areas h2:hover {
-            color: #ffd700;
-            transform: scale(1.05);
         }
         #sa-service-areas p {
             font-size: 16px;
@@ -527,9 +525,6 @@
             cursor: pointer;
             transition: all .3s;
             box-shadow: 0 4px 15px rgba(0, 48, 135, .4);
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
             box-sizing: border-box;
         }
         .sa-dropdown-button:hover {
@@ -538,19 +533,11 @@
             box-shadow: 0 6px 20px rgba(0, 48, 135, .6);
         }
         .sa-dropdown-content {
-            opacity: 0;
-            height: 0;
+            max-height: 0;
             overflow: hidden;
-            transition: opacity .5s, height .5s, transform .5s;
-            transform: translateY(-10px);
+            transition: max-height .5s;
             background: transparent;
             box-sizing: border-box;
-        }
-        .sa-dropdown-content.active {
-            opacity: 1;
-            height: auto;
-            transform: translateY(0);
-            padding: 20px 0;
         }
         .sa-slide ul {
             background: rgba(255, 255, 255, .95);
@@ -563,9 +550,6 @@
             margin: 0;
             display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px;
             
-        }
-        .sa-slide ul:hover {
-            transform: translateY(-5px);
         }
         .sa-slide ul li {
             min-height: 50px;
@@ -591,33 +575,6 @@
             color: #1e3c72;
             font-weight: 600;
         }
-        .sa-zip-dropdown {
-            font-size: 14px;
-            color: #003087;
-            font-weight: 600;
-            max-height: 0;
-            overflow: hidden;
-            opacity: 0;
-            transition: all .4s ease;
-            transform: translateY(-10px);
-            box-sizing: border-box;
-        }
-        .sa-zip-dropdown.active {
-            max-height: 40px;
-            opacity: 1;
-            transform: translateY(0);
-            padding-top: 4px;
-        }
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
         #cf-schedule-container {
             background: transparent;
             border: 2px solid #808080;
@@ -629,7 +586,7 @@
             box-sizing: border-box;
         }
         .cf-schedule-text {
-            font-family: 'Montserrat', sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
             font-size: 1.5rem;
             color: #2A2A2A;
             font-weight: 600;
@@ -677,6 +634,7 @@
             justify-content: center;
             transition: all .3s;
             box-sizing: border-box;
+            border: none;
         }
         .form-call-now:hover {
             background: #c41b20;
@@ -799,6 +757,19 @@
             cursor: pointer;
             box-sizing: border-box;
         }
+        .cf-modal-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            z-index: 1999;
+        }
+        .cf-modal-overlay.active {
+            display: block;
+        }
         footer {
             background: #1a1a1a;
             color: #b0b0b0;
@@ -826,7 +797,6 @@
             font-size: 18px;
             font-weight: 700;
             margin-bottom: 20px;
-            font-family: 'Montserrat', sans-serif;
         }
         
         .footer-column p {
@@ -868,7 +838,6 @@
             font-size: 22px;
             font-weight: 700;
             margin-bottom: 15px;
-            font-family: 'Montserrat', sans-serif;
         }
         
         .footer-hours {
@@ -944,9 +913,18 @@
         }
         
         @media (max-width: 992px) {
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 40px;
+            }
+            
             .footer-bottom-links {
                 justify-content: center;
                 gap: 20px 30px;
+            }
+            
+            .sa-slide ul {
+                display: grid; grid-template-columns: repeat(2, 1fr); gap: 15px;
             }
         }
         
@@ -971,23 +949,23 @@
             .footer-bottom-links {
                 gap: 15px 25px;
             }
-
+            
             .sa-slide ul {
                 display: grid; grid-template-columns: 1fr; gap: 15px;
             }
-
+            
             .sa-slide ul li {
                 min-height: 60px;
                 justify-content: center;
                 text-align: center;
             }
-
+            
             .sa-slide ul li h3 {
                 text-align: center;
                 width: 100%;
             }
         }
-
+        
         @media (max-width: 480px) {
             .footer-bottom-links {
                 flex-direction: column;
@@ -999,11 +977,6 @@
                 font-size: 13px;
             }
         }
-        [id^="expandable-text-"].expanded::-webkit-scrollbar { width: 6px; }
-        [id^="expandable-text-"].expanded::-webkit-scrollbar-track { background: #f1f1f1; border-radius: 3px; }
-        [id^="expandable-text-"].expanded::-webkit-scrollbar-thumb { background: var(--blue); border-radius: 3px; }
-        [id^="expandable-text-"].expanded::-webkit-scrollbar-thumb:hover { background: var(--red); }
-        [id^="expandable-text-"].expanded { scrollbar-width: thin; scrollbar-color: var(--blue) #f1f1f1; }
     
         .county-item {
             cursor: pointer;
